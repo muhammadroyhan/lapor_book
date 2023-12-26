@@ -62,6 +62,7 @@ class LoginController extends GetxController {
       print('Login Successful');
       Get.offAllNamed("/home");
     } catch (e) {
+      print('error: ${e.toString()}');
       Fluttertoast.showToast(
         msg: e.toString(),
       );
