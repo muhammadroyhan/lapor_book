@@ -60,7 +60,7 @@ class LoginController extends GetxController {
         password: passwordController.text,
       );
       print('Login Successful');
-      Get.offAllNamed("/home");
+      Get.offAllNamed("/navbar");
     } catch (e) {
       print('error: ${e.toString()}');
       Fluttertoast.showToast(

@@ -32,16 +32,10 @@ class RegisterController extends GetxController {
     if (value.isEmpty || value == ' ') {
       return 'Email tidak boleh kosong';
     }
-    if (value.contains(' ') ||
-        value.contains('  ') ||
-        !value.contains('@') ||
-        !value.contains('.') ||
-        !GetUtils.isEmail(value)) {
-      return 'Masukan email dengan benar';
+    if (!GetUtils.isEmail(value)) {
+      return 'Masukkan email dengan benar';
     }
-    {
-      return null;
-    }
+    return null;
   }
 
   String? validateNomorHp(String value) {
@@ -64,26 +58,18 @@ class RegisterController extends GetxController {
       return 'Kata sandi tidak boleh kosong';
     }
     if (!GetUtils.isLengthGreaterThan(value, 7)) {
-      return "Minimal 8 karakter";
+      return "Kata sandi harus minimal 8 karakter";
     }
-    if (value.contains(' ') ||
-        value.contains('  ') ||
-        !RegExp(r"^(?=.*[a-z])").hasMatch(value)) {
-      return "Minimal 1 huruf kecil";
+    if (!RegExp(r"^(?=.*[a-z])").hasMatch(value)) {
+      return "Kata sandi harus memiliki minimal 1 huruf kecil";
     }
-    if (value.contains(' ') ||
-        value.contains('  ') ||
-        !RegExp(r"^(?=.*[A-Z])").hasMatch(value)) {
-      return "Minimal 1 huruf Besar";
+    if (!RegExp(r"^(?=.*[A-Z])").hasMatch(value)) {
+      return "Kata sandi harus memiliki minimal 1 huruf besar";
     }
-    if (value.contains(' ') ||
-        value.contains('  ') ||
-        !RegExp(r"(?=.*[@$!%*?&])").hasMatch(value)) {
-      return "Minimal 1 simbol";
+    if (!RegExp(r"(?=.*[@$!%*?&])").hasMatch(value)) {
+      return "Kata sandi harus memiliki minimal 1 simbol (@, !, %, *, ?, &)";
     }
-    {
-      return null;
-    }
+    return null;
   }
 
   String? validateKonfirmPassword(String value) {
@@ -115,8 +101,10 @@ class RegisterController extends GetxController {
       print(docId);
       Get.toNamed("/login");
     } catch (e) {
+      print(e.toString());
       Fluttertoast.showToast(
-        msg: e.toString(),
+        msg:
+            "Terjadi kesalahan saat melakukan registrasi. Pastikan koneksi internet Anda stabil.",
       );
     }
   }

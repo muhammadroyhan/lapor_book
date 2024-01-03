@@ -5,8 +5,8 @@ import 'package:lapor_book/app/components/styles.dart';
 class TextformfielAuth extends StatelessWidget {
   const TextformfielAuth({
     Key? key,
-    required this.obscureText,
     required this.enable,
+    this.hint,
     this.controller,
     this.validator,
     this.onChanged,
@@ -14,8 +14,8 @@ class TextformfielAuth extends StatelessWidget {
   }) : super(key: key);
 
   final bool enable;
-  final bool obscureText;
   final TextEditingController? controller;
+  final String? hint;
   final String? initialValue;
   final validator;
   final onChanged;
@@ -27,13 +27,15 @@ class TextformfielAuth extends StatelessWidget {
       enabled: enable,
       initialValue: initialValue,
       textAlign: TextAlign.justify,
-      obscureText: obscureText,
-      obscuringCharacter: '*',
       validator: validator,
       onChanged: onChanged,
       textAlignVertical: TextAlignVertical.center,
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.all(8),
+        hintText: hint,
+        hintStyle: GoogleFonts.poppins(
+          fontSize: 14,
+        ),
         border: OutlineInputBorder(
           borderSide: BorderSide(
             color: primaryColor,
@@ -60,8 +62,8 @@ class TextformfielAuth extends StatelessWidget {
 class TextformfielHP extends StatelessWidget {
   const TextformfielHP({
     Key? key,
-    required this.obscureText,
     required this.enable,
+    this.hint,
     this.controller,
     this.validator,
     this.onChanged,
@@ -69,8 +71,8 @@ class TextformfielHP extends StatelessWidget {
   }) : super(key: key);
 
   final bool enable;
-  final bool obscureText;
   final TextEditingController? controller;
+  final String? hint;
   final String? initialValue;
   final validator;
   final onChanged;
@@ -83,12 +85,14 @@ class TextformfielHP extends StatelessWidget {
       initialValue: initialValue,
       textAlign: TextAlign.justify,
       keyboardType: TextInputType.number,
-      obscureText: obscureText,
-      obscuringCharacter: '*',
       validator: validator,
       onChanged: onChanged,
       textAlignVertical: TextAlignVertical.center,
       decoration: InputDecoration(
+        hintText: hint,
+        hintStyle: GoogleFonts.poppins(
+          fontSize: 14,
+        ),
         contentPadding: const EdgeInsets.all(8),
         border: OutlineInputBorder(
           borderSide: BorderSide(

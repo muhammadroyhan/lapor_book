@@ -13,6 +13,7 @@ Widget textHeader(String text) {
     style: GoogleFonts.poppins(
       fontSize: 28,
       fontWeight: FontWeight.bold,
+      color: Colors.white,
     ),
   );
 }
@@ -23,6 +24,16 @@ Widget textAuth(String text) {
     style: GoogleFonts.poppins(
       fontWeight: FontWeight.w500,
       fontSize: 16,
+    ),
+  );
+}
+
+Widget textlaporan(String text) {
+  return Text(
+    text,
+    style: GoogleFonts.poppins(
+      fontWeight: FontWeight.bold,
+      fontSize: 18,
     ),
   );
 }

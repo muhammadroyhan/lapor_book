@@ -8,17 +8,15 @@ class SplashView extends GetView<SplashController> {
   const SplashView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: GetBuilder<SplashController>(
-        builder: (controller) {
-          return Center(
-            child: Text(
-              'Selamat datang di Aplikasi Laporan',
-              style: TextStyle(fontSize: 20),
-            ),
-          );
-        },
-      ),
-    );
+    return GetBuilder<SplashController>(builder: (controller) {
+      return Scaffold(
+        body: Center(
+          child: Text(
+            'Selamat datang di Aplikasi Laporan',
+            style: TextStyle(fontSize: 20),
+          ),
+        ),
+      );
+    });
   }
 }
