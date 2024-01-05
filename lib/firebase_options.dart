@@ -44,37 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBrVJp_6TlYBC7WC-gNpoD7_UxoO8F2WP4',
-    appId: '1:591933818455:web:017e1264f76d3d87ec8512',
-    messagingSenderId: '591933818455',
-    projectId: 'lapor-book-2c8a7',
-    authDomain: 'lapor-book-2c8a7.firebaseapp.com',
-    storageBucket: 'lapor-book-2c8a7.appspot.com',
+    apiKey: 'AIzaSyB-Bk9ILAuPIGg0-IpKF5y6niqhz0Gawaw',
+    appId: '1:424667508765:web:0f4b37a55b1a3ba0e896f4',
+    messagingSenderId: '424667508765',
+    projectId: 'lapor-book-66f08',
+    authDomain: 'lapor-book-66f08.firebaseapp.com',
+    storageBucket: 'lapor-book-66f08.appspot.com',
+    measurementId: 'G-E7R9NQWB4E',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCgf-sodsm3VPgjUIWfBsXY_MAzJ46w9b8',
-    appId: '1:591933818455:android:9420a534719ecf31ec8512',
-    messagingSenderId: '591933818455',
-    projectId: 'lapor-book-2c8a7',
-    storageBucket: 'lapor-book-2c8a7.appspot.com',
+    apiKey: 'AIzaSyDs8cwWIALmZWnUUUWuTR63qbFaveEw6X8',
+    appId: '1:424667508765:android:4a176757cb97a34be896f4',
+    messagingSenderId: '424667508765',
+    projectId: 'lapor-book-66f08',
+    storageBucket: 'lapor-book-66f08.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDBXry5mV2i5-KyyT5LxFkBhUYjrDwNvH0',
-    appId: '1:591933818455:ios:7e994aba0078e5f2ec8512',
-    messagingSenderId: '591933818455',
-    projectId: 'lapor-book-2c8a7',
-    storageBucket: 'lapor-book-2c8a7.appspot.com',
+    apiKey: 'AIzaSyBh6StTgowzvgFf5IuO8M6sjOnN1Lpy5JE',
+    appId: '1:424667508765:ios:beb37909500e7b2fe896f4',
+    messagingSenderId: '424667508765',
+    projectId: 'lapor-book-66f08',
+    storageBucket: 'lapor-book-66f08.appspot.com',
     iosBundleId: 'com.example.laporBook',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDBXry5mV2i5-KyyT5LxFkBhUYjrDwNvH0',
-    appId: '1:591933818455:ios:7e994aba0078e5f2ec8512',
-    messagingSenderId: '591933818455',
-    projectId: 'lapor-book-2c8a7',
-    storageBucket: 'lapor-book-2c8a7.appspot.com',
-    iosBundleId: 'com.example.laporBook',
+    apiKey: 'AIzaSyBh6StTgowzvgFf5IuO8M6sjOnN1Lpy5JE',
+    appId: '1:424667508765:ios:f8224024a58e7b8de896f4',
+    messagingSenderId: '424667508765',
+    projectId: 'lapor-book-66f08',
+    storageBucket: 'lapor-book-66f08.appspot.com',
+    iosBundleId: 'com.example.laporBook.RunnerTests',
   );
 }
