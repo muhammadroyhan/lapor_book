@@ -68,8 +68,11 @@ class _MyLaporanState extends State<MyLaporan> {
 
     return SafeArea(
       child: Container(
+        padding: EdgeInsets.only(
+          left: 8,
+          top: 8,
+        ),
         width: double.infinity,
-        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
